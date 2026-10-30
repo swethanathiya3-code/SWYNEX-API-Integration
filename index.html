@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobeX | Smart World Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">🌍 Globe<span>X</span></a>
+            <div class="nav-links">
+                <a href="#explore">Explore</a>
+                <a href="#favorites">Favourites</a>
+                <a href="#compare">Compare</a>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <span class="hero-tag">YOUR WORLD, ONE CLICK AWAY</span>
+            <h1>Discover the <span>World</span></h1>
+            <p>Explore countries, compare destinations and discover the beauty of our planet.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="dashboard-stats">
+            <div class="stat-card">
+                <span>🌎</span>
+                <h2 id="totalCountries">0</h2>
+                <p>Total Countries</p>
+            </div>
+            <div class="stat-card">
+                <span>🔍</span>
+                <h2 id="resultCount">0</h2>
+                <p>Results Found</p>
+            </div>
+            <div class="stat-card">
+                <span>❤️</span>
+                <h2 id="favoriteCount">0</h2>
+                <p>My Favourites</p>
+            </div>
+        </section>
+
+        <section id="explore" class="section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-tag">DISCOVER</span>
+                    <h2>Explore Countries</h2>
+                </div>
+                <p>Find your next destination</p>
+            </div>
+
+            <div class="search-panel">
+                <div class="search-box">
+                    <span>🔎</span>
+                    <input type="text" id="searchInput" placeholder="Search any country...">
+                </div>
+
+                <select id="regionFilter">
+                    <option value="all">All Regions</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+
+                <select id="sortFilter">
+                    <option value="name">Sort: A to Z</option>
+                    <option value="population">Population: High to Low</option>
+                </select>
+            </div>
+
+            <div id="status" class="status">Loading countries...</div>
+            <div id="countryContainer" class="country-container"></div>
+        </section>
+
+        <section id="favorites" class="section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-tag">YOUR COLLECTION</span>
+                    <h2>Favourite Countries ❤️</h2>
+                </div>
+            </div>
+            <div id="favoriteContainer" class="country-container">
+                <p class="empty-message">Your favourite countries will appear here.</p>
+            </div>
+        </section>
+
+        <section id="compare" class="section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-tag">SIDE BY SIDE</span>
+                    <h2>Country Comparison</h2>
+                </div>
+            </div>
+
+            <div class="compare-panel">
+                <div class="compare-select">
+                    <label for="countryOne">First Country</label>
+                    <select id="countryOne">
+                        <option value="">Select a country</option>
+                    </select>
+                </div>
+
+                <div class="compare-symbol">VS</div>
+
+                <div class="compare-select">
+                    <label for="countryTwo">Second Country</label>
+                    <select id="countryTwo">
+                        <option value="">Select a country</option>
+                    </select>
+                </div>
+
+                <button id="compareButton">Compare Countries</button>
+            </div>
+
+            <div id="comparisonResult"></div>
+        </section>
+
+        <section id="worldMap" class="section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-tag">EXPLORE THE PLANET</span>
+                    <h2>Interactive World Map</h2>
+                </div>
+            </div>
+            <div id="mapContainer" class="map-container">
+                <p>World map will appear here.</p>
+            </div>
+        </section>
+
+        <section id="travelInfo" class="section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-tag">TRAVEL DISCOVERY</span>
+                    <h2>Weather & Local Time</h2>
+                </div>
+            </div>
+
+            <div class="travel-panel">
+                <select id="travelCountry">
+                    <option value="">Select a country</option>
+                </select>
+                <button id="travelButton">Explore Details</button>
+            </div>
+
+            <div id="travelResult"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <h2>🌍 GlobeX</h2>
+        <p>Explore. Discover. Compare.</p>
+        <p>SWYNEX Internship – Task 3 | API Integration</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
